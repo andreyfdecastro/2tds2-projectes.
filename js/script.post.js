@@ -46,3 +46,19 @@ function storePost(title, category, resume, author, date) {
 }
 posts.push(post);
 console.log(post);
+
+function showPost(){
+let showcontente = "";
+
+posts.forEach((post, index) => {
+showcontente += 
+<div class = "itemPost" >
+<h2>$(post.title)</h2>
+<p><strong>categoria: </strong>${post.category}</p>
+<p><strong>Resumo: </strong>${post.Resumo}</p>
+<p><strong>author: </strong>${post.author}</p>
+<p><strong>Data de publicação: </strong>${post.date}</p>
+</div>
+})
+document.getElementById("list").innerHTML = showPost;
+}
